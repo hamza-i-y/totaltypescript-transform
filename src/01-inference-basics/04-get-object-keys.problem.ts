@@ -1,3 +1,4 @@
+import test from "node:test";
 import { Equal, Expect } from "../helpers/type-utils";
 
 const testingFrameworks = {
@@ -12,6 +13,8 @@ const testingFrameworks = {
   },
 };
 
-type TestingFramework = unknown;
+type TTestingFrameworks = typeof testingFrameworks;
+
+type TestingFramework = keyof TTestingFrameworks;
 
 type tests = [Expect<Equal<TestingFramework, "vitest" | "jest" | "mocha">>];
