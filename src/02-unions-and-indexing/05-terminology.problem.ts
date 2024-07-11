@@ -8,23 +8,24 @@
  * Which is which?
  */
 
-type A =
-  | {
-      type: "a";
-      a: string;
-    }
-  | {
-      type: "b";
-      b: string;
-    }
-  | {
-      type: "c";
-      c: string;
-    };
+type A = //Discriminated union
 
-type B = "a" | "b" | "c";
+    | {
+        type: "a";
+        a: string;
+      }
+    | {
+        type: "b";
+        b: string;
+      }
+    | {
+        type: "c";
+        c: string;
+      };
 
-enum C {
+type B = "a" | "b" | "c"; //Union
+
+enum C { //Enum
   A = "a",
   B = "b",
   C = "c",

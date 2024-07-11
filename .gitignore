@@ -1,3 +1,5 @@
 node_modules
 .vscode
 tsconfig.temp.json
+.DS_store
+src/.DS_store
